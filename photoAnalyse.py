@@ -72,7 +72,8 @@ def find_address_from_GPS(GPS):
     location = baidu_map_address["result"]["sematic_description"]
     return formatted_address,province,city,district,location
 if __name__ == '__main__':
-    GPS_info = find_GPS_image(pic_path='C:/Users/张振/Desktop/namespace.jpg')
+    #需分析的图片(原图，且手机开启定位功能)
+    GPS_info = find_GPS_image(pic_path='C:/Users/张振/Desktop/temp1.jpg')
     address = find_address_from_GPS(GPS=GPS_info)
     print("拍摄时间：" + GPS_info.get("date_information"))
     print('照片拍摄地址:' + str(address))
